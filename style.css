@@ -1,0 +1,51 @@
+body {
+    height: 100dvh;
+    width: 100%;
+    background-image: url("https://darksoul-codepen.github.io/DarkSoul.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Belanosima', sans-serif;
+    color: var(--primary-color);
+}
+
+:root {
+    --primary-color: #564d93;
+}
+
+.weather-card {
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 2px #ffffff, 50px 50px 200px #8677e2, 50px 50px 200px #39306e, -0.5px -0.5px 2px #ffffff;
+    backdrop-filter: blur(10px);
+    animation: anim 5s linear 0s infinite;
+}
+
+input {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: none;
+    color: var(--primary-color) !important;
+}
+
+input:focus {
+    outline: none;
+    color: white;
+}
+
+input button iconify-icon {
+    color: var(--primary-color) !important;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(10px) translateX(5px);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
