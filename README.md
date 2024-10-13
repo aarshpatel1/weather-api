@@ -1,7 +1,3 @@
-Here’s a README file for the weather API website:
-
----
-
 # Weather API Website
 
 This is a simple weather website that provides real-time weather information for any location using a weather API. It is built with HTML, CSS, and JavaScript.
@@ -23,6 +19,17 @@ This is a simple weather website that provides real-time weather information for
 1. The user enters the name of a city in the search bar.
 2. The website sends a request to the weather API to fetch current weather information for that city.
 3. The retrieved weather data is displayed on the website, including temperature, weather conditions, and the name of the location.
+
+## Screenshots
+
+### Homepage
+![Homepage Screenshot](screenshots/weather-api-screenshot-1.png)
+
+### Weather Search Result
+![Search Result Screenshot](screenshots/weather-api-screenshot-2.png)
+
+### Mobile Screen Responsive Home Page and Results
+![Mobile Screen Screenshot](screenshots/weather-api-mobile-screen.png)
 
 ## Getting Started
 
