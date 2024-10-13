@@ -14,8 +14,6 @@ search.addEventListener("click", function () {
             console.log(windSpeed)
             let temperature = kelvinToCelsius(data["main"]["temp"])
             console.log(temperature)
-
-            
         }).catch((err) => console.log(err))
 })
 
