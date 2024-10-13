@@ -51,7 +51,13 @@ input:focus {
 
 .btn-secondary {
     background-color: transparent;
-    border: none
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 16px -4px rgba(134, 119, 226, 1);
 }
 
 iconify-icon {
@@ -97,13 +103,20 @@ p+span {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23564d93'%3E%3Cpath d='M12 21.5c4.101 0 7.5-3.063 7.5-6.929c0-2.415-1.233-4.859-2.627-6.862c-1.403-2.017-3.022-3.66-3.895-4.491a1.413 1.413 0 0 0-1.956 0c-.873.83-2.492 2.474-3.895 4.491C5.733 9.712 4.5 12.156 4.5 14.571c0 3.866 3.399 6.929 7.5 6.929Z'/%3E%3Cpath stroke-linecap='round' d='M12 18a4 4 0 0 1-4-4'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-.mdi--air-filter {
+.mdi--sea-level-rise {
     display: inline-block;
     width: 64px;
     height: 64px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20 14h2v2h-2c-1.38 0-2.74-.35-4-1c-2.5 1.3-5.5 1.3-8 0c-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33c2.44 1.71 5.56 1.71 8 0c1.22.86 2.61 1.33 4 1.33m0 6h2v2h-2c-1.38 0-2.74-.35-4-1c-2.5 1.3-5.5 1.3-8 0c-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33c2.44 1.71 5.56 1.71 8 0c1.22.86 2.61 1.33 4 1.33M7 2L3 6h3v5h2V6h3m6-4l-4 4h3v5h2V6h3'/%3E%3C/svg%3E");
     transform: translateY(10px);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23564d93' d='M19 18.31V20a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3.7c-.46-.18-1.05-.3-2-.3a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.82 0 1.47.08 2 .21V12.3c-.46-.18-1.05-.3-2-.3a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.82 0 1.47.08 2 .21V8.3C4.54 8.12 3.95 8 3 8a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.82 0 1.47.08 2 .21V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2.16c1.78.31 2.54.97 2.71 1.13c.39.39.39 1.03 0 1.42s-.91.38-1.42 0c0 0-1.04-.71-3.29-.71c-1.26 0-2.09.41-3.05.9c-1.04.51-2.21 1.1-3.95 1.1c-.36 0-.69 0-1-.04V7.95c.3.05.63.05 1 .05c1.26 0 2.09-.41 3.05-.89C14.09 6.59 15.27 6 17 6V4H7v16h10v-2c1.5 0 1.97.29 2 .31M17 10c-1.73 0-2.91.59-3.95 1.11c-.96.48-1.79.89-3.05.89c-.37 0-.7 0-1-.05v2.01c.31.04.64.04 1 .04c1.74 0 2.91-.59 3.95-1.1c.96-.48 1.79-.9 3.05-.9c2.25 0 3.29.71 3.29.71c.51.39 1.03.39 1.42 0s.39-1.02 0-1.42C21.5 11.08 20.25 10 17 10m0 4c-1.73 0-2.91.59-3.95 1.11c-.96.48-1.79.89-3.05.89c-.37 0-.7 0-1-.05v2.01c.31.04.64.04 1 .04c1.74 0 2.91-.59 3.95-1.1c.96-.48 1.79-.9 3.05-.9c2.25 0 3.29.71 3.29.71c.51.39 1.03.39 1.42 0s.39-1.02 0-1.42C21.5 15.08 20.25 14 17 14'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    mask-image: var(--svg);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+#wind-speed,
+#humidity,
+#sea-level {
+    font-weight: 600;
 }

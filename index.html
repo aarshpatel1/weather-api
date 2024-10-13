@@ -24,32 +24,32 @@
     <div class="container h-100 d-flex align-items-center justify-content-center">
         <div class="weather-card">
             <div class="input-group mb-3 rounded">
-                <input type="search" id="city" class="form-control fw-bold" placeholder="City">
+                <input type="search" id="city" class="form-control shadow-none fw-bold" placeholder="City">
                 <button class="input-group-text btn btn-secondary" id="search">
                     <iconify-icon icon="line-md:search" width="24" height="24" style="color: #564d93"></iconify-icon>
                 </button>
             </div>
-            <div class="details p-3  rounded">
-                <p class="display-6 text-center m-0">Surat</p>
-                <span class="d-block text-center my-2 fs-4">Partially Cloudy</span>
-                <h1 class="fw-bold display-1 text-center">12<sup>°</sup></h1>
+            <div class="details p-3 rounded">
+                <p class="display-6 text-center m-0" id="city-name">Surat</p>
+                <span class="d-block text-center my-2 fs-4" id="weather-condition">Partially Cloudy</span>
+                <h1 class="fw-bold display-1 text-center" id="temperature">12<sup>°</sup></h1>
             </div>
-            <div class="details p-3  rounded mt-3">
+            <div class="details p-3 rounded mt-3">
                 <div class="row">
                     <div class="col d-flex flex-column justify-content-center align-items-center">
                         <span class="d-block text-center">Wind</span>
                         <div class="meteocons--wind-fill"></div>
-                        <span class="d-block text-center">12km/h</span>
+                        <span class="d-block text-center" id="wind-speed">12km/h</span>
                     </div>
                     <div class="col d-flex flex-column justify-content-center align-items-center">
                         <span class="d-block text-center">Humidity</span>
                         <div class="lets-icons--humidity-light"></div>
-                        <span class="d-block text-center mt-3">djfhfjjsdfh</span>
+                        <span class="d-block text-center mt-3" id="humidity">djfhfjjsdfh</span>
                     </div>
                     <div class="col d-flex flex-column justify-content-center align-items-center">
-                        <span class="d-block text-center">AQI</span>
-                        <div class="mdi--air-filter"></div>
-                        <span class="d-block text-center mt-3">slkdfjsd</span>
+                        <span class="d-block text-center" style="font-size: 0.95em;">Sea Level</span>
+                        <div class="mdi--sea-level-rise"></div>
+                        <span class="d-block text-center mt-3" id="sea-level">slkdfjsd</span>
                     </div>
                 </div>
             </div>
