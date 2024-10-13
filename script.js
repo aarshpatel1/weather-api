@@ -3,34 +3,28 @@ const api_key = "bbc1f8ebc1bdaef327ca95454e98490f"
 const city = document.getElementById("city")
 const search = document.getElementById("search")
 
+window.onload = function () {
+    fetchWeatherData("London")
+}
+
 search.addEventListener("click", function () {
-    fetch(geoCodingWeatherAPI + `?q=${city.value.trim()}&appid=${api_key}`)
+    if (city.value.trim() !== "") fetchWeatherData(city.value.trim())
+})
+
+function fetchWeatherData(cityName) {
+    fetch(geoCodingWeatherAPI + `?q=${cityName}&appid=${api_key}`)
         .then((response) => response.json())
         .then((data) => {
-            // console.log(data)
-            // let humidity = data["main"]["humidity"]
-            // console.log(humidity)
-            // let windSpeed = data["wind"]["speed"]
-            // console.log(windSpeed)
-            // let temperature = kelvinToCelsius(data["main"]["temp"])
-            // console.log(temperature)
-
-            document.getElementById("city-name").textContent = titleCase(city.value.trim())
+            document.getElementById("city-name").textContent = titleCase(cityName)
             document.getElementById("weather-condition").textContent = titleCase(data["weather"][0]["description"])
             document.getElementById("temperature").innerHTML = `${kelvinToCelsius(data["main"]["temp"])}<sup>°</sup>`
             document.getElementById("wind-speed").innerHTML = `${beaufortWindScaleToKM(data["wind"]["speed"])} km/h`
             document.getElementById("humidity").innerHTML = `${data["main"]["humidity"]} %`
-            document.getElementById("sea-level").innerHTML = `${data["main"]["sea_level"]} hPa`
-
-
-
-
-
+            document.getElementById("sea-level").innerHTML = `${data["main"]["sea_level"] || 'N/A'} hPa`
         }).catch((err) => console.log(err))
-})
+}
 
 function kelvinToCelsius(kelvin) {
-    // return parseFloat((kelvin - 273.15).toFixed(2));
     return Math.round(kelvin - 273.15)
 }
 
